@@ -7,8 +7,8 @@ class MainWindow(QMainWindow):
 
         # Basic Layout
         self.cw = QWidget()
-        self.view_layout = QVBoxLayout()
-        self.cw.setLayout(self.view_layout)
+        self.vLayout = QVBoxLayout()
+        self.cw.setLayout(self.vLayout)
         self.setCentralWidget(self.cw)
 
         # Window Title
@@ -21,6 +21,5 @@ class MainWindow(QMainWindow):
         self.setFixedSize(self.width(), self.height())
 
     # Function to add widget to Layout
-    def addWidgetToVLayout(self, widget: QWidget):
-        self.view_layout.addWidget(widget)
-        self.adjustFixedSize()
+    def addToVLayout(self, widget: QWidget):
+        self.vLayout.addWidget(widget)
