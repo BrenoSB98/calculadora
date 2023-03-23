@@ -1,18 +1,18 @@
 import qdarktheme
-from constraints import (COLOR_WHITE, DARKER_PRIMARY_COLOR,
-                         DARKEST_PRIMARY_COLOR, PRIMARY_COLOR)
+from constraints import (DARKER_PRIMARY_COLOR, DARKEST_PRIMARY_COLOR,
+                         PRIMARY_COLOR)
 
 qss = f"""
     PushButton[cssClass="specialButton"] {{
-        color: {COLOR_WHITE};
+        color: #fff;
         background: {PRIMARY_COLOR};
     }}
     PushButton[cssClass="specialButton"]:hover {{
-        color: {COLOR_WHITE};
+        color: #fff;
         background: {DARKER_PRIMARY_COLOR};
     }}
     PushButton[cssClass="specialButton"]:pressed {{
-        color: {COLOR_WHITE};
+        color: #fff;
         background: {DARKEST_PRIMARY_COLOR};
     }}
 """

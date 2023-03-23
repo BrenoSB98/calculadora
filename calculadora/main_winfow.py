@@ -21,5 +21,5 @@ class MainWindow(QMainWindow):
         self.setFixedSize(self.width(), self.height())
 
     # Function to add widget to Layout
-    def addToVLayout(self, widget: QWidget):
+    def addWidgetsToVLayout(self, widget: QWidget):
         self.vLayout.addWidget(widget)
