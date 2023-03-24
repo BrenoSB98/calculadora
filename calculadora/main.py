@@ -21,7 +21,7 @@ if __name__ == '__main__':
     app.setWindowIcon(icon)
 
     # Info
-    info = Info('')
+    info = Info('Your account')
     window.addWidgetsToVLayout(info)
 
     # Display
