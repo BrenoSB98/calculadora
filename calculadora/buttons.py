@@ -79,7 +79,7 @@ class ButtonsGrid(QGridLayout):
                     # self.addWidget(button, rowNumber, colNumber + 1)
 
                 self.addWidget(button, rowNumber, colNumber)
-                slot = self._makeSlot(self._insertToDisplay, button)
+                slot = self._makeSlot(self._insertToDisplay, buttonText)
                 self._connectButtonClicked(button, slot)
 
     def _connectButtonClicked(self, button, slot):
@@ -106,7 +106,7 @@ class ButtonsGrid(QGridLayout):
 
     @Slot()
     def _makeSlot(self, func, *args, **kwargs):
-        @Slot(bool)
+        @ Slot(bool)
         def realSlot(_):
             func(*args, **kwargs)
         return realSlot
@@ -118,12 +118,11 @@ class ButtonsGrid(QGridLayout):
         if not isValidNumber(displayText):
             return
 
-        number = converToNumber(displayText) * (-1)
+        number = converToNumber(displayText) * -1
         self.display.setText(str(number))
 
     @Slot()
     def _insertToDisplay(self, text):
-        newDisplayValue: str
         newDisplayValue = self.display.text() + text
 
         if not isValidNumber(newDisplayValue):
